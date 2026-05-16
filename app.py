@@ -3,8 +3,16 @@ import pandas as pd
 import pickle
 
 # Load model + encoder (ONLY ONCE)
-model = pickle.load(open("models/model.pkl", "rb"))
-encoder = pickle.load(open("models/encoder.pkl", "rb"))
+import os
+import pickle
+
+BASE_DIR = os.path.dirname(__file__)
+
+model_path = os.path.join(BASE_DIR, "models/model.pkl")
+encoder_path = os.path.join(BASE_DIR, "models/target_encoder.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+encoder = pickle.load(open(encoder_path, "rb"))
 
 st.title("Perfume Recommendation System")
 
