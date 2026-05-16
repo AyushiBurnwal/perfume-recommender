@@ -3,10 +3,10 @@ import pandas as pd
 import pickle
 import os
 
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-model_path = os.path.join(BASE_DIR, "models/model.pkl")
-encoder_path = os.path.join(BASE_DIR, "models/target_encoder.pkl")
+model_path = os.path.join(BASE_DIR, "models", "model.pkl")
+encoder_path = os.path.join(BASE_DIR, "models", "target_encoder.pkl")
 
 model = pickle.load(open(model_path, "rb"))
 encoder = pickle.load(open(encoder_path, "rb"))
