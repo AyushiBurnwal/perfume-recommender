@@ -1,10 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-
-# Load model + encoder (ONLY ONCE)
 import os
-import pickle
 
 BASE_DIR = os.path.dirname(__file__)
 
